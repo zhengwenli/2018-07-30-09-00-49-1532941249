@@ -7,17 +7,17 @@ module.exports = function main() {
 };
 
 class Sequence {
-  constructor(sequence) {
+  constructor(input) {
     // Write your code here
-    this.sequence = sequence
+    this.input = input
   }
 
   minimum() {
     // Write your code here
-    var arrmin = sequence[0];
-    for(var i = 1; i <sequence.length; i++){
-      if(sequence[i]<arrmin){
-        arrmin = sequence[i];
+    var arrmin = input[0];
+    for(var i = 1; i <input.length; i++){
+      if(input[i]<arrmin){
+        arrmin = input[i];
       }
     }
     this.arrmin=arrmin;
@@ -26,10 +26,10 @@ class Sequence {
 
   // Write your code here
   maximum(){
-    var arrmax = sequence[0];
-    for(var i = 1; i <sequence.length; i++){
-      if(sequence[i]>arrmax){
-        arrmax = sequence[i];
+    var arrmax = input[0];
+    for(var i = 1; i <input.length; i++){
+      if(input[i]>arrmax){
+        arrmax = input[i];
       }
     }
     this.arrmax = arrmax;
@@ -37,16 +37,16 @@ class Sequence {
   }
 
   serial_number(){
-    return this.sequence.length;
+    return this.input.length;
   }
 
   serial_mean(){
     var ave=0;
     var sum=0;
-    for(var i = 1; i <sequence.length; i++){
-      sum +=sequence[i];
+    for(var i = 1; i <input.length; i++){
+      sum +=input[i];
     }
-    ave = (sum / sequence.length).toFixed(2);
+    ave = (sum / input.length).toFixed(2);
     this.ave = ave;
     return this.ave;
   }
