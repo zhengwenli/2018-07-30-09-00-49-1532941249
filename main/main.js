@@ -1,15 +1,15 @@
 module.exports = function main() {
     let sequence = new Sequence([6, 9, 15, -2, 92, 11]);
     console.log(`o) 最小值 = ${sequence.minimum()}
-    o) 最小值 = ${sequence.maximum()}
-    o) 最小值 = ${sequence.serial_number()}
-    o) 最小值 = ${sequence.serial_mean()}`);
+    o) 最大值 = ${sequence.maximum()}
+    o) 元数数量 = ${sequence.serial_number()}
+    o) 平均数 = ${sequence.serial_mean()}`);
 };
 
 class Sequence {
   constructor(sequence) {
     // Write your code here
-    this.isequence = sequence
+    this.sequence = sequence
   }
 
   minimum() {
@@ -20,7 +20,8 @@ class Sequence {
         arrmin = sequence[i];
       }
     }
-    return arrmin;
+    this.arrmin=arrmin;
+    return this.arrmin;
   }
 
   // Write your code here
@@ -31,7 +32,8 @@ class Sequence {
         arrmax = sequence[i];
       }
     }
-    return arrmax; 
+    this.arrmax = arrmax;
+    return this.arrmax; 
   }
 
   serial_number(){
@@ -45,6 +47,7 @@ class Sequence {
       sum +=sequence[i];
     }
     ave = (sum / sequence.length).toFixed(2);
-    return ave;
+    this.ave = ave;
+    return this.ave;
   }
 }
