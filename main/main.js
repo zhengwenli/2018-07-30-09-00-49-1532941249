@@ -49,7 +49,7 @@ class Sequence {
 
   Sequence_mean(){
     var sum=0;
-    for(var i = 1; i <this.input.length; i++){
+    for(var i = 0; i <this.input.length; i++){
       sum +=this.input[i];
     }
     this.arrave = (sum / this.input.length).toFixed(2);
