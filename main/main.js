@@ -1,9 +1,9 @@
 module.exports = function main() {
   let sequence = new Sequence([6, 9, 15, -2, 92, 11]);
-  console.log(`o) 最小值 = ${sequence.minimum()}`);
-  console.log(`o) 最大值 = ${sequence.maximum()}`);
-  console.log(`o) 元数数量 = ${sequence.Sequence_length()}`);
-  console.log(`o) 平均数 = ${sequence.Sequence_mean()}`); 
+  console.log(`o) 最小值 = ${sequence.minimum()}
+  o) 最大值 = ${sequence.maximum()}
+  o) 元素数量 = ${sequence.number()}
+  o) 平均值 = ${sequence.average()}`);
 };
 
 /*Sequence类，用来表示序列，包含最小值arrmin，最大值arrmax，序列长度arrlen，平均值arrave这四个属性
